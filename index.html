@@ -11,20 +11,20 @@
 </head>
 <body class="max-w-[1380px] mx-auto">
     <header>
-        <nav class="flex justify-between border-b-2 py-3 px-20 items-center ">
+        <nav class="flex justify-between border-b-2 py-2 px-2 md:py-3 md:px-20 items-center ">
             <div>
-                <h1 class="text-xl font-bold"><span class="px-3 py-1 bg-[#006CDD] mr-2 text-slate-200">News</span>Portal</h1>
+                <h1 class="text-base md:text-xl font-bold"><span class="px-3 py-1 bg-[#006CDD] mr-2 text-slate-200">News</span>Portal</h1>
             </div>
-            <div class="flex items-center gap-10">
-                <ul class="flex gap-6">
-                    <li><a class="border-b border-[#006CDD]" href="#">News</a></li>
-                    <li><a href="#">Blogs</a></li>
+            <div class="flex items-center gap-2 md:gap-10">
+                <ul class="flex gap-1 md:gap-6">
+                    <li><a class="border-b border-[#006CDD] text-xs md:text-base" href="#">News</a></li>
+                    <li><a href="#" class="text-xs md:text-base">Blogs</a></li>
                 </ul>
-                <img class="w-12 rounded-full" src="images/download.jpeg" alt="">
+                <img class="w-6 sm:w-12 rounded-full" src="images/download.jpeg" alt="">
             </div>
         </nav>
         <!-- display category name -->
-        <div id="category-container" class="max-w-[1150px] mx-auto flex justify-between mt-4 text-base font-semibold text-slate-600 ">
+        <div id="category-container" class="max-w-[1150px] mx-auto hidden  md:flex justify-between sm:mt-4 text-xs sm:text-base font-semibold text-slate-600 ">
             <a href="#" class="text-[#006CDD]">Home</a>
 
         </div>
@@ -32,8 +32,25 @@
     <main class="max-w-[1150px] mx-auto">
         <!-- alert section -->
         <section>
-            <div class="w-full bg-slate-200 h-10 mt-5 rounded flex items-center px-4 ">
-                <h1 class="text-[#006CDD]"><span id="news-category-name" class="font-semibold">No selected category</span> news found <span  class="font-semibold">(<span id="news-count">0</span>)</span></h1>
+            <div class="w-full bg-slate-200 h-7 sm:h-10 mt-3 md:mt-8 rounded flex items-center justify-center sm:justify-start sm:px-4 ">
+                <h1 class="text-[#006CDD] text-xs md:text-base"><span id="news-category-name" class=" font-semibold">No selected category</span> news found <span  class="font-semibold">(<span id="news-count">0</span>)</span></h1>
+            </div>
+        </section>
+        <!-- filter and btn section -->
+        <section class="flex justify-between items-center mt-2 md:mt-7">
+            <div class="flex gap-1 sm:gap-3 ">
+                <h1 class="text-xs md:text-base font-semibold">Short by View: </h1>
+                <select class="md:w-24 rounded text-xs sm:text-sm text-slate-700" name="" id="">
+                    <option disabled selected>default</option>
+                    <option value="">One</option>
+                    <option value="">two</option>
+                    <option value="">three</option>
+                    <option value="">four</option>
+                </select>
+            </div>
+            <div>
+                <button class="text-xs md:text-base font-semibold border border-[#006CDD] h-8 w-28  hover:bg-[#006CDD] hover:text-white sm:mr-1">Today’s Pick</button>
+                <button class="text-xs md:text-base font-semibold border border-[#006CDD] h-8 w-28  hover:bg-[#006CDD] hover:text-white">Tranding</button>
             </div>
         </section>
     </main>
